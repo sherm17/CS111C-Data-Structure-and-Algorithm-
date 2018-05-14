@@ -64,7 +64,9 @@ public class LabFPartADriver {
 		System.out.println("getLessThanRecursive should print \n[A, B, B, B, C, D, D, E, E, F, F]\n" + dupTree.getAllEntriesLessThanRecursive("G"));
 		System.out.println("getLessThanIterative should print \n[]\n" + dupTree.getAllEntriesLessThanIterative("A"));
 		System.out.println("getLessThanRecursive should print \n[]\n" + dupTree.getAllEntriesLessThanRecursive("A"));
+		System.out.println("getLessThanRecursive should print \n[A]\n" + dupTree.getAllEntriesLessThanRecursive("B"));
 
+		
 		
 	}
 	
