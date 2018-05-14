@@ -27,9 +27,7 @@ public class BinarySearchTreeWithDups<T extends Comparable<? super T>> extends B
 
 	// ??? IMPLEMENT THIS METHOD
 	private T addEntryHelperIterative(T newEntry) {
-		// IMPORTANT: METHOD MUST BE ITERATIVE!!
 		
-		// will return null 
 		BinaryNodeInterface<T> currentNode = getRootNode();
 		assert currentNode != null;
 		T result = null;
@@ -106,7 +104,6 @@ public class BinarySearchTreeWithDups<T extends Comparable<? super T>> extends B
 	}
 	
 	private void inorderTraverse(BinaryNodeInterface<T> node, T val, ArrayList arr) {
-
 		if(node != null) {
 			inorderTraverse(node.getLeftChild(), val, arr);
 			if(val.equals(node.getData())) {
@@ -116,7 +113,6 @@ public class BinarySearchTreeWithDups<T extends Comparable<? super T>> extends B
 		}
 	}
 
-	// ??? IMPLEMENT THIS METHOD
 	public ArrayList<T> getAllEntriesLessThanIterative(T searchVal) {
 
 		BinaryNodeInterface<T> currentNode = getRootNode();
@@ -139,14 +135,11 @@ public class BinarySearchTreeWithDups<T extends Comparable<? super T>> extends B
 				currentNode = nextNode.getRightChild();
 			}
 		}
-		
-		
 		return entryList;
 	}
 
 	public ArrayList<T> getAllEntriesLessThanRecursive(T searchVal) {
-		// this initial code is meant as a suggestion to get your started- feel
-		// free to use it or delete it!
+
 		BinaryNodeInterface<T> rootNode = getRootNode();
 		ArrayList<T> entryList = new ArrayList<T>();
 		getAllEntriesLessThanHelper(searchVal, rootNode, entryList);
