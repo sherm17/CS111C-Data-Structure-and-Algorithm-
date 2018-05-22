@@ -106,6 +106,8 @@ public class DirectedGraph<T> implements BasicGraphInterface <T>, java.io.Serial
 			Iterator<VertexInterface<T>> neighbors = frontVertex.getNeighborIterator();
 			while (neighbors.hasNext()) {
 				VertexInterface<T> nextNeighbor = neighbors.next();
+				System.out.println("Current looking at " + nextNeighbor);
+
 				if (!nextNeighbor.isVisited()) {
 					nextNeighbor.visit();
 					traversalOrder.add(nextNeighbor.getLabel());
